@@ -1,5 +1,6 @@
 #imports
-from tkinter import * 
+from tkinter import *
+import winsound 
 #letters
 alfabeto = {
 	1: "a",
@@ -58,7 +59,9 @@ alfabeto_morse = {
 	25: "-.--",
 	26: "--.."
 }
-#funciones
+#functions
+tt = ''
+
 def traducir_letra(l):
 		letra_traducida = ""
 		if l == alfabeto_morse[1]:
@@ -194,6 +197,7 @@ def traducir(frase):
 
 
 def button1():
+	global tt
 	tt = traducir(mainWindow.e.get())	
 	entrytt = Entry(root, width=50, bg="#f1f1f1", borderwidth=0)
 	entrytt.insert(0, "El texto en morse es: " + tt)
@@ -206,10 +210,22 @@ def button2():
 	entrytm.insert(0, "El morse en texto es: " + tm)
 	entrytm.grid(row=5, column=0)
 
+
+def play(mt):
+	for x in mt:
+		if x == '.':
+			winsound.Beep(3799, 1000)
+
+		elif x == '-':
+			winsound.Beep(3799, 2000)
+	
+		else:
+			winsound.Beep(3799, 0)
+
 #graphics
 root = Tk()
 root.title("MorseApp")
-root.geometry("400x450")
+root.geometry("420x450")
 
 
 #Class window
@@ -232,8 +248,12 @@ class Window:
 		self.mybutton2 = Button(self.root, text="traducir", command=button2)
 		self.mybutton2.grid(row=4, column=1)
 
+		self.mybutton3 = Button(self.root, text='Escuchar', command= lambda: play(tt))
+		self.mybutton3.grid(row=1, column=2)
+
 
 if __name__ == '__main__':
 	mainWindow = Window(root)
+
 
 root.mainloop()
