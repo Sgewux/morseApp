@@ -1,6 +1,6 @@
-#import
+#imports
 from tkinter import * 
-#letras de el alfabeto
+#letters
 alfabeto = {
 	1: "a",
 	2: "b",
@@ -29,7 +29,7 @@ alfabeto = {
 	25: "y",
 	26: "z"
 }
-#letras morse
+#morse letters
 alfabeto_morse = {
 	1: ".-",
 	2: "-...",
@@ -206,11 +206,13 @@ def button2():
 	entrytm.insert(0, "El morse en texto es: " + tm)
 	entrytm.grid(row=5, column=0)
 
-#graficos
+#graphics
 root = Tk()
 root.title("MorseApp")
 root.geometry("400x450")
 
+
+#Class window
 class Window:
 
 	def __init__(self, root):
