@@ -214,14 +214,13 @@ def button2():
 def play(mt):
 	for x in mt:
 		if x == '.':
-			winsound.Beep(3799, 1000)
+			winsound.Beep(3799, 500)
 
 		elif x == '-':
-			winsound.Beep(3799, 2000)
+			winsound.Beep(3799, 1000)
 	
 		else:
-			winsound.Beep(3799, 0)
-
+			continue
 #graphics
 root = Tk()
 root.title("MorseApp")
