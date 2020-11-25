@@ -68,15 +68,16 @@ def traducir_letra(l):
 
 			if l == alfabeto_morse[i]:
 				letra_traducida = alfabeto[i]
+				break
 			
 			elif l == " ":
 				letra_traducida = " "
+				break
 			
 			else:
 				continue
 		return letra_traducida
 		
-
  		
 def traducir_morse(f):
 	letra = ""
@@ -94,62 +95,18 @@ def traducir_morse(f):
 def traducir(frase):
 		traduccion = ""
 		for letra in frase:
-			if letra in alfabeto[1]:
-				traduccion = traduccion + alfabeto_morse[1] + "/"
-			elif letra in alfabeto[2]:
-				traduccion = traduccion + alfabeto_morse[2] + "/"
-			elif letra in alfabeto[3]:
-				traduccion = traduccion + alfabeto_morse[3] + "/"	
-			elif letra in alfabeto[4]:
-				traduccion = traduccion + alfabeto_morse[4] + "/"	
-			elif letra in alfabeto[5]:
-				traduccion = traduccion + alfabeto_morse[5] + "/"	
-			elif letra in alfabeto[6]:
-				traduccion = traduccion + alfabeto_morse[6] + "/"	
-			elif letra in alfabeto[7]:
-				traduccion = traduccion + alfabeto_morse[7] + "/"	
-			elif letra in alfabeto[8]:
-				traduccion = traduccion + alfabeto_morse[8] + "/"	
-			elif letra in alfabeto[9]:
-				traduccion = traduccion + alfabeto_morse[9] + "/"	
-			elif letra in alfabeto[10]:
-				traduccion = traduccion + alfabeto_morse[10] + "/"	
-			elif letra in alfabeto[11]:
-				traduccion = traduccion + alfabeto_morse[11] + "/"	
-			elif letra in alfabeto[12]:
-				traduccion = traduccion + alfabeto_morse[12] + "/"	
-			elif letra in alfabeto[13]:
-				traduccion = traduccion + alfabeto_morse[13] + "/"	
-			elif letra in alfabeto[14]:
-				traduccion = traduccion + alfabeto_morse[14] + "/"	
-			elif letra in alfabeto[15]:
-				traduccion = traduccion + alfabeto_morse[15] + "/"	
-			elif letra in alfabeto[16]:
-				traduccion = traduccion + alfabeto_morse[16] + "/"	
-			elif letra in alfabeto[17]:
-				traduccion = traduccion + alfabeto_morse[17] + "/"	
-			elif letra in alfabeto[18]:
-				traduccion = traduccion + alfabeto_morse[18] + "/"	
-			elif letra in alfabeto[19]:
-				traduccion = traduccion + alfabeto_morse[19] + "/"	
-			elif letra in alfabeto[20]:
-				traduccion = traduccion + alfabeto_morse[20] + "/"	
-			elif letra in alfabeto[21]:
-				traduccion = traduccion + alfabeto_morse[21] + "/"	
-			elif letra in alfabeto[22]:
-				traduccion = traduccion + alfabeto_morse[22] + "/"	
-			elif letra in alfabeto[23]:
-				traduccion = traduccion + alfabeto_morse[23] + "/"	
-			elif letra in alfabeto[24]:
-				traduccion = traduccion + alfabeto_morse[24] + "/"	
-			elif letra in alfabeto[25]:
-				traduccion = traduccion + alfabeto_morse[25] + "/"
-			elif letra in alfabeto[26]:
-				traduccion = traduccion + alfabeto_morse[26] + "/"	
-			elif letra == " ":
-				traduccion = traduccion + " " + "/"
-			else:
-				traduccion = traduccion + "*caracter invalido*/"
+			for i in range(1, 27):
+				if letra == alfabeto[i]:
+					traduccion += alfabeto_morse[i] + '/'
+					break
+
+				elif letra == ' ':
+					traduccion += ' ' + '/'
+					break
+
+				else:
+					continue
+					
 		return traduccion
 
 
