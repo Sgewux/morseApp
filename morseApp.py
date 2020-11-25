@@ -64,61 +64,18 @@ tt = ''
 
 def traducir_letra(l):
 		letra_traducida = ""
-		if l == alfabeto_morse[1]:
-		 	letra_traducida = alfabeto[1]
-		elif l == alfabeto_morse[2]:
-		 	letra_traducida = alfabeto[2] 
-		elif l == alfabeto_morse[3]:
-		 	letra_traducida = alfabeto[3]
-		elif l == alfabeto_morse[4]:
-		 	letra_traducida = alfabeto[4]
-		elif l == alfabeto_morse[5]:
-		 	letra_traducida = alfabeto[5]
-		elif l == alfabeto_morse[6]:
-		 	letra_traducida = alfabeto[6]
-		elif l == alfabeto_morse[7]:
-		 	letra_traducida = alfabeto[7]
-		elif l == alfabeto_morse[8]:
-			letra_traducida = alfabeto[8]
-		elif l == alfabeto_morse[9]:
-		 	letra_traducida = alfabeto[9]
-		elif l == alfabeto_morse[10]:
-		 	letra_traducida = alfabeto[10]
-		elif l == alfabeto_morse[11]:
-		 	letra_traducida = alfabeto[11]
-		elif l == alfabeto_morse[12]:
-		 	letra_traducida = alfabeto[12]
-		elif l == alfabeto_morse[13]:
-		 	letra_traducida = alfabeto[13]
-		elif l == alfabeto_morse[14]:
-		 	letra_traducida = alfabeto[14]
-		elif l == alfabeto_morse[15]:
-		 	letra_traducida = alfabeto[15]
-		elif l == alfabeto_morse[16]:
-		 	letra_traducida = alfabeto[16]
-		elif l == alfabeto_morse[17]:
-		 	letra_traducida = alfabeto[17]
-		elif l == alfabeto_morse[18]:
-		 	letra_traducida = alfabeto[18]
-		elif l == alfabeto_morse[19]:
-		 	letra_traducida = alfabeto[19]
-		elif l == alfabeto_morse[20]:
-		 	letra_traducida = alfabeto[20]
-		elif l == alfabeto_morse[21]:
-		 	letra_traducida = alfabeto[21]
-		elif l == alfabeto_morse[22]:
-		 	letra_traducida = alfabeto[22]
-		elif l == alfabeto_morse[23]:
-		 	letra_traducida = alfabeto[23]
-		elif l == alfabeto_morse[24]:
-		 	letra_traducida = alfabeto[24]
-		elif l == alfabeto_morse[25]:
-		 	letra_traducida = alfabeto[25]
-		elif l == alfabeto_morse[26]:
-		 	letra_traducida = alfabeto[26]
-		elif l == " ":
-			letra_traducida = " "
+		for i in range(1, 27):
+
+			if l == alfabeto_morse[i]:
+				letra_traducida = alfabeto[i]
+			
+			elif l == " ":
+				letra_traducida = " "
+			
+			else:
+				continue
 		return letra_traducida
+		
 
  		
 def traducir_morse(f):
